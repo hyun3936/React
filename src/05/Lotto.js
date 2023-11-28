@@ -1,75 +1,62 @@
 import style from './Lotto.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Lotto() {
-    const [tags, setTags] = useState();
+    // let tags = 'Lotto번호 생성기'
+    const [tags, setTags] = useState("Lotto번호 생성기")
 
-    const handleClick = (e) => {
-        e.preventDefault();
+    const handleClick = () => {
+        console.log("handleClick")
+        // tags = Math.floor(Math.random()*45) + 1;
+        let lottoNum = [];
 
-        let arr = [];
-        while (arr.length < 7){
-            let n = Math.floor(Math.random()*45) + 1 ; // 1~45
-            if (!arr.includes(n)) arr.push(n);
+        while (lottoNum.length < 7) {
+            let n = Math.floor(Math.random() * 45) + 1;
+
+
+            if (!lottoNum.includes(n)) lottoNum.push(n);
         }
 
-        let tempTags ;
 
-        tempTags = arr.map( (item, idx) =>   // tags가 배열, 맵을돌아서 7개만듦
-          // parseInt로 숫자로 바꿈  //몫을 구함
-          // 한줄이면 중괄호 없애고 return도 없앨 수 있음. 세미콜론도.
-          // 몫으로 구한 변수를 여기 사용
-            // 여긴 if문을 못쓰기 떄문에 대신 삼항연산 사용
+        
 
+        // + 추가
+        lottoNum.splice(6, 0, '+'); // 배열 추가 6시작, 제거0, +추가
+        console.log("handleClick", lottoNum)
 
-            idx == 5 
-            ? <>
-            <span key = {`sp${idx}`} className={style.sp1}>
-            {item}
-            </span> 
-            <span className = 'sp' id='spp'> + </span>
-            </>
-            : <span className='sp' id = {`sp${Math.floor(parseInt(item) / 10)}`}>
+        let tmTags = lottoNum.map((item, idx) =>
+        (item === '+')
+        ? <span key={`sp${idx}`} className = {style.spp}>{item}</span>
+        : <span key={`sp${idx}`}className = {style[`sp${Math.floor(item/10)}`]}>
             {item}
             </span>
-            )
+        )
+
+        console.log(tmTags);
 
 
-
-        // idx == 5 
-        // ? <>
-        // <span className='sp' id ={`ssp${Math.floor(parseInt(item) / 10)}`}>
-        // {item}
-        // </span> 
-        // <span className = 'sp' id='spp'> + </span>
-        // </>
-        // : <span className='sp' id = {`sp${Math.floor(parseInt(item) / 10)}`}>
-        // {item}
-        // </span>
-        // )
-
-        
-        
-
-
-        setTags(tempTags);
+        setTags(tmTags)
     }
+
+
+    useEffect(() => {
+        setTags("로또번호생성기");
+    }, []);
+
+
+    useEffect(() => {
+       // console.log(tags);
+    }, [tags]); // 변경이 일어났을떄 자동으로
+
+
     return (
-        <main className={style.m}>
-            <section className={style.sec}>
-                <form className={style.fm}>
-                    <div className={style.fdiv}>
-                        <div className={style.div1} id='d1'>
-                            {tags}
-                        </div>
-                    </div>
-                    <div className={style.fdiv}>
-                        <div className={style.div1} id='d2'>
-                            <button className={style.bt} onClick={handleClick}>로또번호생성</button>
-                        </div>
-                    </div>
-                </form>
-            </section>
-        </main>
+        <div className={style.divLotto}>
+            <div className={style.d1}>
+                <p className={style.divp}>{tags}</p>
+            </div>
+            <div>
+                <button className={style.bt} onClick={() => handleClick()}>로또번호생성</button>
+            </div>
+        </div>
     )
 }
