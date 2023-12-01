@@ -4,7 +4,8 @@ import './App.css';
 //import FrontEnd from './03/FrontEnd';
 //import Lotto from './05/Lotto';
 // import BoxOffice from './06/BoxOffice';
-import Frcst from './07/Frcst';
+// import Frcst from './07/Frcst';
+import Frcst2 from './07/Frcst2';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
    // <FrontEnd/>
    //<Lotto/>
    // <BoxOffice/>
-   <Frcst />
+   <Frcst2 />
   );
 }
 
