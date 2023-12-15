@@ -7,7 +7,8 @@ import './App.css';
 // import Frcst from './07/Frcst';
 //import Frcst2 from './07/Frcst2';
 //import RefTest from './08/RefTest';
-import Traffic from './09/Traffic';
+//import Traffic from './09/Traffic';
+import Gallery from './10/Gallery';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
    //<BoxOffice/>
    //<Frcst2 />
    //<RefTest/>
-   <Traffic/>
+   //<Traffic/>
+   <Gallery/>
   );
 }
 
