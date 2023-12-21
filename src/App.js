@@ -8,7 +8,9 @@ import './App.css';
 //import Frcst2 from './07/Frcst2';
 //import RefTest from './08/RefTest';
 //import Traffic from './09/Traffic';
-import Gallery from './10/Gallery';
+//import Gallery from './10/Gallery';
+// import BusanFestival from './10/BusanFestival';
+import RMain from './12/RMain';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
    //<Frcst2 />
    //<RefTest/>
    //<Traffic/>
-   <Gallery/>
+   //<Gallery/>
+  // <BusanFestival/>
+   <RMain/>
   );
 }
 
