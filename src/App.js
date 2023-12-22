@@ -10,21 +10,24 @@ import './App.css';
 //import Traffic from './09/Traffic';
 //import Gallery from './10/Gallery';
 // import BusanFestival from './10/BusanFestival';
-import RMain from './12/RMain';
+//import RMain from './12/RMain';
+import Fcst from './13/Fcst';
+
 
 function App() {
   return (
-    // <LogoM /> // <LogoM></LogoM>
-    // <ClockMain/>
-   // <FrontEnd/>
-   //<Lotto/>
-   //<BoxOffice/>
-   //<Frcst2 />
-   //<RefTest/>
-   //<Traffic/>
-   //<Gallery/>
+  // <LogoM /> // <LogoM></LogoM>
+  // <ClockMain/>
+  // <FrontEnd/>
+  // <Lotto/>
+  // <BoxOffice/>
+  // <Frcst2 />
+  // <RefTest/>
+  // <Traffic/>
+  // <Gallery/>
   // <BusanFestival/>
-   <RMain/>
+  // <RMain/>
+   <Fcst/>
   );
 }
 
