@@ -11,8 +11,8 @@ import './App.css';
 //import Gallery from './10/Gallery';
 // import BusanFestival from './10/BusanFestival';
 //import RMain from './12/RMain';
-import Fcst from './13/Fcst';
-
+// import Fcst from './13/Fcst';
+import Ex01 from './90/Ex01';
 
 function App() {
   return (
@@ -27,7 +27,8 @@ function App() {
   // <Gallery/>
   // <BusanFestival/>
   // <RMain/>
-   <Fcst/>
+  // <Fcst/>
+   <Ex01/>
   );
 }
 
