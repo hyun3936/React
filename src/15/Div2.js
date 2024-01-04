@@ -1,0 +1,16 @@
+import Div3 from "./Div3";
+import { useRecoilValue } from "recoil";
+import { divn4 } from "./DivAtoms";
+
+export default function Div2() {
+    const n4 = useRecoilValue(dive4)
+
+    return (
+        <div className="w-5/6 h-5/6 rounded-xl bg-green-300 p-10 flex flex-col justify-center items-center">
+            <div className="text-xl text-white">
+                Div2
+            </div>
+            <Div3 />
+        </div>
+    )
+}
